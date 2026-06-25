@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointment Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Appointment</h1>
+    
+    <!-- Login / Onboarding -->
+    <section id="login">
+      <h2>Login</h2>
+      <input type="text" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button onclick="showServices()">Login</button>
+    </section>
+
+    <!-- Service Selection -->
+    <section id="services" class="hidden">
+      <h2>Select Service</h2>
+      <button onclick="showBooking('Consultation')">Consultation</button>
+      <button onclick="showBooking('Fitness Training')">Fitness Training</button>
+      <button onclick="showBooking('Salon')">Salon</button>
+    </section>
+
+    <!-- Date & Time Booking -->
+    <section id="booking" class="hidden">
+      <h2 id="serviceTitle"></h2>
+      <label>Date: <input type="date" id="date"></label>
+      <label>Time: <input type="time" id="time"></label>
+      <button onclick="confirmBooking()">Confirm</button>
+    </section>
+
+    <!-- Confirmation -->
+    <section id="confirmation" class="hidden">
+      <h2>Appointment Confirmed ✅</h2>
+      <p id="confirmText"></p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
